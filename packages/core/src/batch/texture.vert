@@ -1,5 +1,5 @@
 precision highp float;
-attribute vec2 aVertexPosition;
+attribute vec3 aVertexPosition;
 attribute vec2 aTextureCoord;
 attribute vec4 aColor;
 attribute float aTextureId;
@@ -13,7 +13,7 @@ varying vec4 vColor;
 varying float vTextureId;
 
 void main(void){
-    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);
+    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition.xy, 1.0)).xy, aVertexPosition.z, 1.0);
 
     vTextureCoord = aTextureCoord;
     vTextureId = aTextureId;

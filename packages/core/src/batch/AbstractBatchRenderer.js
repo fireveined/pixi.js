@@ -719,6 +719,7 @@ export class AbstractBatchRenderer extends ObjectRenderer
         {
             float32View[aIndex++] = vertexData[i];
             float32View[aIndex++] = vertexData[i + 1];
+            float32View[aIndex++] = element.z || 0;
             float32View[aIndex++] = uvs[i];
             float32View[aIndex++] = uvs[i + 1];
             uint32View[aIndex++] = argb;

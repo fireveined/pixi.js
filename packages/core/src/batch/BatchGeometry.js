@@ -34,7 +34,7 @@ export class BatchGeometry extends Geometry
          */
         this._indexBuffer = new Buffer(null, _static, true);
 
-        this.addAttribute('aVertexPosition', this._buffer, 2, false, TYPES.FLOAT)
+        this.addAttribute('aVertexPosition', this._buffer, 3, false, TYPES.FLOAT)
             .addAttribute('aTextureCoord', this._buffer, 2, false, TYPES.FLOAT)
             .addAttribute('aColor', this._buffer, 4, true, TYPES.UNSIGNED_BYTE)
             .addAttribute('aTextureId', this._buffer, 1, true, TYPES.FLOAT)

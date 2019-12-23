@@ -33,14 +33,12 @@
     "predist": "rimraf dist/* && npm run build:prod && npm run types",
     "dist": "npm run docs",
     "postdist": "copyfiles -f bundles/*/dist/* dist && copyfiles -f \"packages/**/dist/*\" dist/packages",
-    "prerelease": "npm run clean:build && npm test",
+    "prerelease": "",
     "postversion": "npm run build:prod",
     "release": "lerna publish --exact",
     "compile:docs": "tsc -p tsconfig.docs.json"
   },
-  "pre-commit": [
-    "lintfix"
-  ],
+
   "devDependencies": {
     "@lerna/batch-packages": "^3.13.0",
     "@lerna/filter-packages": "^3.13.0",

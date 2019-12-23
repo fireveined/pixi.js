@@ -47,7 +47,7 @@ export class BatchPluginFactory
             vertex: defaultVertex,
             fragment: defaultFragment,
             geometryClass: BatchGeometry,
-            vertexSize: 6,
+            vertexSize: 7,
         }, options);
 
         return class BatchPlugin extends AbstractBatchRenderer
